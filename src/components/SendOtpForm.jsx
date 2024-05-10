@@ -1,9 +1,14 @@
 import React from "react";
+import { sendOtp } from "../services/Auth";
 
-function SendOtpForm({ step, mobile, setMobile }) {
-  const submitHander = (event) => {
+function SendOtpForm({ setStep, mobile, setMobile }) {
+  const submitHander = async (event) => {
     event.preventDefault();
-    console.log(event);
+    if (mobile.length !== 11) return;
+    const { response, error } =await sendOtp(mobile);
+    if (response) setStep(2);
+    if (error) console.log(error.response.data.message);
+    console.log({ response, error });
   };
   return (
     <form onSubmit={submitHander}>
