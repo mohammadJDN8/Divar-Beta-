@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import SendOtpForm from "../components/SendOtpForm";
+import CheckOtpForm from "../components/CheckOtpForm";
 
 function AuthPage() {
-  return <div>AuthPage</div>;
+  const [step, setStep] = useState(1);
+  const [mobile, setMobile] = useState("");
+  const [code, setCode] = useState("");
+  return (
+    <div>
+      {step === 1 && <SendOtpForm setStep={setStep} mobile={mobile} setMobile={setMobile} />}
+      {step === 2 && <CheckOtpForm />}
+   </div>
+  );
 }
 
 export default AuthPage;
