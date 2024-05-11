@@ -26,6 +26,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
         onChange={(e) => setMobile(e.target.value)}
       />
       <button type="submit">ارسال کد تایید</button>
+      
     </form>
   );
 }
