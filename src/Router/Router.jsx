@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AuthPage from "../pages/AuthPage";
 import AdminPage from "../pages/AdminPage";
@@ -9,15 +9,31 @@ import { useQuery } from "@tanstack/react-query";
 import { getProfile } from "../services/User";
 
 function Router() {
-  const { data, isLoading,error } = useQuery(["profile"], getProfile);
-  console.log({ data, isLoading ,error});
+  const { data, isLoading, error } = useQuery(["profile"], getProfile);
+  console.log({ data, isLoading, error });
+  if (isLoading) return <h1>Loading ...</h1>;
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/auth" element={<AuthPage />} />
-      <Route path="/admin" element={<AdminPage />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/pageNotFound" element={<PageNotFound />} />
+      <Route
+        path="/dashboard"
+        element={data ? <Dashboard /> : <Navigate to="/auth" />}
+      />
+      <Route
+        path="/auth"
+        element={data ? <Navigate to="/dashboard" /> : <AuthPage />}
+      />
+      <Route
+        path="/admin"
+        element={
+          data && data.data.role === "ADMIN" ? (
+            <AdminPage />
+          ) : (
+            <Navigate to="/" />
+          )
+        }
+      />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
