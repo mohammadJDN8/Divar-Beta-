@@ -28,4 +28,6 @@ select {
   font-family: inherit;
 }
 
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

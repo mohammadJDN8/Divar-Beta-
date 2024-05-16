@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form{
+    @apply flex flex-col max-w-lg m-auto p-8 border-solid border-2 border-l-gray-200 rounded-lg mt-20 
+  }
+  .form p{
+@apply text-lg font-medium my-5 mr-5
+  }
+  .form span{
+@apply text-xs mb-5 mr-5
+  }
+  .form input{
+    @apply mt-5 mb-10 p-2 border-solid border-2 border-gray-400 rounded-md mx-5
+  }
+  .form button{
+    @apply bg-red-900 border rounded-md text-white text-sm w-16 h-10 mr-5 mb-5 hover:bg-red-800
+  }
+  .form .backBtn{
+    @apply bg-white text-red-900 w-40 border-red-900 hover:bg-zinc-50
+}
+}

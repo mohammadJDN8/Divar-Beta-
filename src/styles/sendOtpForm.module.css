@@ -1,0 +1,29 @@
+/* .form{
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  margin: auto;
+  padding: 30px;
+  border: solid 1px #e9e9e9;
+  border-radius: 10px;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .form {
+    @apply flex flex-col max-w-lg m-auto p-8 border-solid border-2 border-l-gray-200 rounded-lg mt-20; 
+  }
+  .form p {
+    @apply text-lg font-medium mb-5;
+  }
+  .form span {
+    @apply text-xs text-gray-500 mt-5 mr-0 mb-10;
+  }
+  .form button{
+    @apply h-12 w-32 text-sm leading-4 border-none bg-red-900 text-white rounded-md hover:bg-red-800 transition ease-in
+  }
+  .form input{
+    @apply mt-5 mb-10 p-2.5 border-solid border-2 border-gray-400 rounded-md
+  }
+}
