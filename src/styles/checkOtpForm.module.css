@@ -16,9 +16,9 @@
     @apply mt-5 mb-10 p-2 border-solid border-2 border-gray-400 rounded-md mx-5
   }
   .form button{
-    @apply bg-red-900 border rounded-md text-white text-sm w-16 h-10 mr-5 mb-5 hover:bg-red-800
+    @apply bg-red-900 border rounded-md text-white text-sm w-16 h-10 mr-5 mb-5 hover:bg-red-800 transition-all
   }
   .form .backBtn{
-    @apply bg-white text-red-900 w-40 border-red-900 hover:bg-zinc-50
+    @apply bg-white text-red-900 w-40 border-red-900 hover:bg-zinc-50 transition-all
 }
 }

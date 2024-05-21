@@ -11,8 +11,9 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+  
   .form {
-    @apply flex flex-col max-w-lg m-auto p-8 border-solid border-2 border-l-gray-200 rounded-lg mt-20; 
+    @apply flex flex-col  m-auto max-w-lg p-8 border-2  rounded-lg mt-20 ; 
   }
   .form p {
     @apply text-lg font-medium mb-5;

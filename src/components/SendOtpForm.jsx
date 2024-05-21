@@ -12,7 +12,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
     console.log({ response, error });
   };
   return (
-    <div className={styles.container}>
+    
       <form className={styles.form} onSubmit={submitHander}>
         <p>ورود به حساب کاربری</p>
         <span>
@@ -29,7 +29,7 @@ function SendOtpForm({ setStep, mobile, setMobile }) {
         />
         <button type="submit">ارسال کد تایید</button>
       </form>
-    </div>
+    
   );
 }
 

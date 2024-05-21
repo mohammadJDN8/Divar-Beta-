@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .header{
+    @apply flex justify-between py-4 px-2.5 items-center border-b-2  mb-10
+  }
+  .header div{
+    @apply flex 
+  }
+  .header span{
+    @apply flex items-center  text-gray-500 h-12 
+  }
+  .header span p{
+    @apply mr-1.5 text-sm
+  }
+  .header .button{
+    @apply bg-red-900 text-white  rounded-md h-10 w-20 leading-10 text-center mr-10 hover:bg-red-800 ease-in transition-all
+  }
+  .header .logo{
+    @apply w-12 ml-10
+  }
+}
