@@ -9,7 +9,6 @@ body {
   /* max-width: 1400px;
   min-height: 100vh; */
   padding: 10px;
-  
 }
 
 * {
@@ -32,3 +31,9 @@ select {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply h-12 w-32 text-sm leading-4 border-none bg-red-900 text-white rounded-md hover:bg-red-800 transition ease-in;
+  }
+}

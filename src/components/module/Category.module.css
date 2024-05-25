@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form h3{
+@apply text-lg inline-block font-bold border-b-4 border-red-900 max-w-32 mb-5
+  }
+  .form {
+    @apply flex flex-col p-2 m-5
+  }
+  .form input,.form label  {
+    @apply p-1.5 text-sm
+  }
+  .form input{
+    @apply rounded-md w-56 border-2 border-gray-300 mb-2.5
+  }
+  .form button{
+    @apply h-10 w-24 text-sm leading-4 border-none bg-red-900 text-white rounded-md hover:bg-red-800 transition ease-in mt-2.5
+  }
+}
